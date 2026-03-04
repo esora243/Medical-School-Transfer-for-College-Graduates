@@ -1,0 +1,23 @@
+{
+  "name": "医学部学士編入対策プラットフォーム",
+  "short_name": "医学部学士編入対策",
+  "description": "医学部学士編入のための過去問演習・スケジュール管理・AI対策アプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://picsum.photos/id/1/192/192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://picsum.photos/id/1/512/512",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
