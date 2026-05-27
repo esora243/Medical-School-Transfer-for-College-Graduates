@@ -1,29 +1,493 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>医学部学士編入対策プラットフォーム</title>
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#4f46e5" />
-    
-    <!-- iOS support -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="医学部学士編入対策" />
-    <link rel="apple-touch-icon" href="https://picsum.photos/id/1/180/180" />
-    
-    <!-- Prevent elastic scrolling on iOS -->
-    <style>
-      body {
-        overscroll-behavior-y: none;
-        -webkit-tap-highlight-color: transparent;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="クレアメディカル株式会社｜医療現場のDXを加速する医療用アプリの開発・販売と、医療・ヘルスケア領域のスタートアップ支援を行う福岡発の企業。福岡市・北九州市・福岡銀行・大手IT企業との連携実績。">
+<meta name="keywords" content="医療アプリ,医療DX,ヘルスケア,スタートアップ支援,福岡,医療IT,クレアメディカル">
+<meta property="og:title" content="クレアメディカル株式会社｜医療の未来を、福岡から。">
+<meta property="og:description" content="医療現場のDXを加速する医療用アプリの開発と、ヘルスケア領域のスタートアップ支援。">
+<meta property="og:type" content="website">
+<title>クレアメディカル株式会社｜医療の未来を、福岡から。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<!-- ============== ヘッダー ============== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#top" class="header__logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 4 L26 14 L36 14 L28 22 L31 34 L20 28 L9 34 L12 22 L4 14 L14 14 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="20" cy="20" r="3" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-text__en">CREA MEDICAL</span>
+        <span class="logo-text__jp">クレアメディカル株式会社</span>
+      </span>
+    </a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <ul class="gnav__list">
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#access">Access</a></li>
+      </ul>
+      <a href="#contact" class="gnav__cta">お問い合わせ</a>
+    </nav>
+    <button class="gnav__toggle" id="navToggle" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============== ヒーロー ============== -->
+<section class="hero" id="top">
+  <div class="hero__bg" style="background-image:url('images/hero.jpg');"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <p class="hero__pre">Medical DX × Startup Innovation</p>
+    <h1 class="hero__title">
+      <span>テクノロジーで、</span>
+      <span>医療の<em>あたりまえ</em>を、</span>
+      <span>もう一段先へ。</span>
+    </h1>
+    <p class="hero__lead">
+      私たちクレアメディカルは、医療現場のDXを実現する自社アプリ開発と、<br class="pc-only">
+      ヘルスケア領域の起業家支援を両輪に、福岡から日本の医療の未来を共創します。
+    </p>
+    <div class="hero__cta">
+      <a href="#service" class="btn btn--primary">事業内容を見る<span class="arrow">→</span></a>
+      <a href="#contact" class="btn btn--ghost">お問い合わせ<span class="arrow">→</span></a>
+    </div>
+    <div class="hero__scroll"><span>SCROLL</span></div>
+  </div>
+  <div class="hero__deco" aria-hidden="true">
+    <div class="hero__pulse"></div>
+  </div>
+</section>
+
+<!-- ============== クライアントロゴ帯（社会的信用の即時提示） ============== -->
+<section class="trustbar">
+  <div class="trustbar__inner">
+    <p class="trustbar__label">Trusted by</p>
+    <ul class="trustbar__list">
+      <li>福岡市</li>
+      <li>北九州市</li>
+      <li>福岡銀行</li>
+      <li>Fukuoka Growth Next</li>
+      <li>株式会社アステム</li>
+      <li>SCSK九州</li>
+      <li>NTTデータアイ</li>
+      <li>NTTデータ九州</li>
+      <li>NSD</li>
+      <li>NJCソフトウェア</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== Vision & Message ============== -->
+<section class="vision" id="vision">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__en">Vision &amp; Message</span>
+      <h2 class="section-head__jp">医療に、確かな<br>イノベーションを。</h2>
+    </div>
+
+    <div class="vision__grid">
+      <div class="vision__image">
+        <img src="images/ceo-message.jpg" alt="代表取締役 伏見勇紀" loading="lazy">
+        <div class="vision__sign">
+          <p class="vision__role">代表取締役</p>
+          <p class="vision__name">伏見 勇紀<span>Yuki Fushimi</span></p>
+        </div>
+      </div>
+      <div class="vision__body">
+        <p class="vision__catch">「現場が変われば、医療は変わる。」</p>
+        <p>私がこの会社を立ち上げた原点には、医療現場で奮闘される医師・看護師・スタッフの皆さまへの、深い敬意があります。命と向き合う最前線で、書類仕事や非効率な情報共有に多くの時間が奪われている現実を、テクノロジーの力で少しでも変えたい——その想いが、クレアメディカルの出発点です。</p>
+        <p>私たちが「医療用アプリの開発」と「スタートアップ支援」という、一見すると異なる二つの事業を手がけている理由はシンプルです。<strong>医療を本気で変えるには、優れた一社だけでは足りない</strong>からです。自社プロダクトで現場の課題に向き合いながら、同じ志を持つ起業家を仲間として迎え、ヘルスケアという広大な領域に多様な解を実装していく。この両輪こそが、業界全体を前進させる最短ルートだと、私たちは確信しています。</p>
+        <p>福岡という土地は、行政・金融・大手IT・医療商社が一体となってスタートアップを育てる、稀有なエコシステムを持っています。その中心で、地域の信頼ある皆さまと手を取り合いながら、医療の未来を一つひとつ形にしてまいります。</p>
+        <p class="vision__signature">クレアメディカル株式会社<br>代表取締役　伏見 勇紀</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Service ============== -->
+<section class="service" id="service">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="section-head__en">Service</span>
+      <h2 class="section-head__jp">医療の現在地と未来を、<br>同時に支える二つの事業。</h2>
+      <p class="section-head__desc">プロダクトと人材投資。両輪で医療業界の構造的課題を解きほぐします。</p>
+    </div>
+
+    <div class="service__list">
+      <!-- 01 -->
+      <article class="service-card">
+        <div class="service-card__image">
+          <img src="images/service-medical.jpg" alt="医療用アプリ開発" loading="lazy">
+          <span class="service-card__num">01</span>
+        </div>
+        <div class="service-card__body">
+          <p class="service-card__cat">Medical App Development</p>
+          <h3 class="service-card__title">医療用アプリ開発・販売</h3>
+          <p class="service-card__text">
+            電子カルテ周辺の業務効率化、患者エンゲージメントの向上、院内コミュニケーション最適化など、医療現場の「あと一歩」をテクノロジーで埋めるアプリケーションを自社開発・提供しています。臨床現場の声を起点に、医師・経営者・情シス担当者と並走しながら、運用に耐える堅牢で使いやすいプロダクトを設計。導入後の伴走支援まで一気通貫で行うことで、現場が確実に変わるDXをお届けします。
+          </p>
+          <ul class="service-card__meta">
+            <li><span>強み</span>臨床現場起点の要件定義と、堅牢なセキュリティ設計</li>
+            <li><span>提供価値</span>業務時間の削減・患者満足度の向上・医療安全の強化</li>
+            <li><span>対象</span>病院・診療所・医療法人・自治体の医療担当部署</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="service-card service-card--reverse">
+        <div class="service-card__image">
+          <img src="images/service-startup.jpg" alt="スタートアップ事業支援" loading="lazy">
+          <span class="service-card__num">02</span>
+        </div>
+        <div class="service-card__body">
+          <p class="service-card__cat">Startup Support</p>
+          <h3 class="service-card__title">スタートアップ事業支援</h3>
+          <p class="service-card__text">
+            医療・ヘルスケア周辺領域で挑戦する起業家・事業者を、構想段階から事業化・グロースまで一貫してサポートいたします。事業戦略の壁打ち、PMF検証、医療機関との接続、資金調達・行政連携のハンズオン支援に至るまで、福岡で築いた強固なネットワークを最大限に活用。単なるアドバイザーではなく、共に汗をかく「共創パートナー」として、次世代のヘルスケア産業を担う一社一社の成長に伴走いたします。
+          </p>
+          <ul class="service-card__meta">
+            <li><span>強み</span>自治体・金融機関・大手IT企業との連携ネットワーク</li>
+            <li><span>提供価値</span>事業の加速・販路拡大・資金調達・人材獲得の総合支援</li>
+            <li><span>対象</span>医療・ヘルスケア領域の起業家／新規事業開発担当者</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- シナジー図 -->
+    <div class="synergy">
+      <p class="synergy__title">二事業の<em>シナジー</em>が、医療業界全体を押し上げる。</p>
+      <div class="synergy__diagram">
+        <div class="synergy__node synergy__node--left">
+          <p class="synergy__node-num">01</p>
+          <p class="synergy__node-name">医療アプリ開発</p>
+          <p class="synergy__node-desc">現場知の蓄積<br>プロダクト基盤</p>
+        </div>
+        <div class="synergy__center">
+          <div class="synergy__pulse"></div>
+          <p>共創<br>Synergy</p>
+        </div>
+        <div class="synergy__node synergy__node--right">
+          <p class="synergy__node-num">02</p>
+          <p class="synergy__node-name">スタートアップ支援</p>
+          <p class="synergy__node-desc">業界ネットワーク<br>新規事業の創出</p>
+        </div>
+      </div>
+      <p class="synergy__caption">プロダクトで得た現場知が起業家を育て、起業家が描く未来が、私たちのプロダクトを進化させる。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Partners ============== -->
+<section class="partners" id="partners">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="section-head__en">Partners &amp; Clients</span>
+      <h2 class="section-head__jp">福岡の中枢が、私たちと共に。</h2>
+      <p class="section-head__desc">自治体・金融機関・大手IT企業・医療総合商社——<br>圧倒的な信頼基盤の上で、私たちは事業を進めています。</p>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="partners__group">
+      <h3 class="partners__group-title"><span>Government</span>自治体・行政連携</h3>
+      <ul class="partners__grid">
+        <li><a href="https://www.city.fukuoka.lg.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">福岡市</span>
+          <span class="partners__sub">Fukuoka City</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+        <li><a href="https://www.city.kitakyushu.lg.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">北九州市</span>
+          <span class="partners__sub">Kitakyushu City</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="partners__group">
+      <h3 class="partners__group-title"><span>Finance &amp; Startup Hub</span>金融機関・スタートアップ拠点</h3>
+      <ul class="partners__grid">
+        <li><a href="https://www.fukuokabank.co.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">福岡銀行</span>
+          <span class="partners__sub">The Bank of Fukuoka</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+        <li><a href="https://growth-next.com/" target="_blank" rel="noopener">
+          <span class="partners__name">Fukuoka Growth Next</span>
+          <span class="partners__sub">福岡市官民共働型スタートアップ支援施設</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="partners__group">
+      <h3 class="partners__group-title"><span>Medical Distribution</span>医療総合商社</h3>
+      <ul class="partners__grid">
+        <li><a href="https://www.astemf.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">株式会社アステム</span>
+          <span class="partners__sub">医薬品・医療機器卸／フォレストグループ</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <div class="partners__group">
+      <h3 class="partners__group-title"><span>IT Solutions</span>大手IT企業・SIer</h3>
+      <ul class="partners__grid">
+        <li><a href="https://www.scsk-kyushu.co.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">SCSK九州株式会社</span>
+          <span class="partners__sub">SCSKグループ／住友商事系</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+        <li><a href="https://www.nsd.co.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">株式会社NSD</span>
+          <span class="partners__sub">独立系SIer／東証プライム</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+        <li><a href="https://www.njcsoft.co.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">NJCソフトウェア株式会社</span>
+          <span class="partners__sub">日本事務器グループ</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+        <li><a href="https://www.nttd-i.co.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">株式会社NTTデータアイ</span>
+          <span class="partners__sub">NTTデータグループ／公共・医療領域</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+        <li><a href="https://www.nttdata-kyushu.co.jp/" target="_blank" rel="noopener">
+          <span class="partners__name">株式会社NTTデータ九州</span>
+          <span class="partners__sub">NTTデータグループ／九州拠点</span>
+          <span class="partners__arrow">↗</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <p class="partners__note">※社名50音順／カテゴリ別表記。各社ロゴ・名称は各社の登録商標です。</p>
+  </div>
+</section>
+
+<!-- ============== Company ============== -->
+<section class="company" id="company">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="section-head__en">Company</span>
+      <h2 class="section-head__jp">会社概要</h2>
+    </div>
+
+    <table class="company__table">
+      <tbody>
+        <tr><th>法人名</th><td>クレアメディカル株式会社<br><span class="company__en">CREA MEDICAL Inc.</span></td></tr>
+        <tr><th>代表者</th><td>代表取締役　伏見 勇紀（ふしみ ゆうき）</td></tr>
+        <tr><th>所在地</th><td>〒810-0001<br>福岡県福岡市中央区天神4-26 天神吉柳ビル7F</td></tr>
+        <tr><th>電話番号</th><td><a href="tel:09020354763">090-2035-4763</a>（代表直通）</td></tr>
+        <tr><th>事業内容</th><td>
+          1. 医療用アプリの開発および販売<br>
+          2. 医療・ヘルスケア領域におけるスタートアップ事業支援
+        </td></tr>
+        <tr><th>主要連携先</th><td>福岡市／北九州市／福岡銀行／Fukuoka Growth Next／株式会社アステム／SCSK九州株式会社／株式会社NSD／NJCソフトウェア株式会社／株式会社NTTデータアイ／株式会社NTTデータ九州　ほか</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============== Access ============== -->
+<section class="access" id="access">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="section-head__en">Access</span>
+      <h2 class="section-head__jp">アクセス</h2>
+    </div>
+    <div class="access__grid">
+      <div class="access__info">
+        <h3>クレアメディカル株式会社</h3>
+        <p class="access__addr">〒810-0001<br>福岡県福岡市中央区天神4-26<br>天神吉柳ビル7F</p>
+        <dl class="access__dl">
+          <dt>最寄駅</dt>
+          <dd>
+            福岡市地下鉄空港線「天神駅」より徒歩約8分<br>
+            西鉄バス「天神四丁目」バス停より徒歩約2分
+          </dd>
+          <dt>TEL</dt>
+          <dd><a href="tel:09020354763">090-2035-4763</a></dd>
+        </dl>
+        <a href="https://www.google.com/maps/search/?api=1&query=福岡県福岡市中央区天神4-26+天神吉柳ビル" target="_blank" rel="noopener" class="btn btn--ghost btn--small">Googleマップで開く<span class="arrow">→</span></a>
+      </div>
+      <div class="access__map">
+        <iframe
+          src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%A4%A9%E7%A5%9E4-26&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="クレアメディカル株式会社 アクセスマップ"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== Contact ============== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head section-head--center section-head--light">
+      <span class="section-head__en">Contact</span>
+      <h2 class="section-head__jp">お問い合わせ</h2>
+      <p class="section-head__desc">事業のご相談・取材・採用に関するお問い合わせは、<br>下記フォームまたはお電話より承ります。</p>
+    </div>
+
+    <!-- 緊急電話導線 -->
+    <div class="contact__phone">
+      <div class="contact__phone-inner">
+        <p class="contact__phone-label">お急ぎの方はお電話にて</p>
+        <a href="tel:09020354763" class="contact__phone-num">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          090-2035-4763
+        </a>
+        <p class="contact__phone-time">受付時間：平日 10:00 - 18:00</p>
+      </div>
+    </div>
+
+    <form class="contact__form" id="contactForm" novalidate>
+      <p class="contact__form-note">「<span class="required">必須</span>」項目は必ずご入力ください。</p>
+
+      <div class="form-row">
+        <label for="inquiry-type">お問い合わせ種別 <span class="required">必須</span></label>
+        <select id="inquiry-type" name="inquiry-type" required>
+          <option value="">選択してください</option>
+          <option value="medical-app">医療用アプリの導入相談</option>
+          <option value="startup">スタートアップ支援のご相談</option>
+          <option value="partnership">業務提携・アライアンス</option>
+          <option value="media">取材・メディア掲載</option>
+          <option value="recruit">採用に関するお問い合わせ</option>
+          <option value="other">その他</option>
+        </select>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="name">お名前 <span class="required">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="例：伏見 勇紀" required>
+        </div>
+        <div class="form-row">
+          <label for="name-kana">フリガナ <span class="optional">任意</span></label>
+          <input type="text" id="name-kana" name="name-kana" placeholder="例：フシミ ユウキ">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="company">会社名・団体名 <span class="optional">任意</span></label>
+          <input type="text" id="company" name="company" placeholder="例：〇〇病院／〇〇株式会社">
+        </div>
+        <div class="form-row">
+          <label for="position">役職 <span class="optional">任意</span></label>
+          <input type="text" id="position" name="position" placeholder="例：院長／情報システム部">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="email">メールアドレス <span class="required">必須</span></label>
+          <input type="email" id="email" name="email" placeholder="例：example@crea-medical.jp" required>
+        </div>
+        <div class="form-row">
+          <label for="tel">電話番号 <span class="optional">任意</span></label>
+          <input type="tel" id="tel" name="tel" placeholder="例：092-XXX-XXXX">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>ご職業・お立場 <span class="optional">任意</span></label>
+        <div class="form-radio-grid">
+          <label class="form-radio"><input type="radio" name="role" value="doctor"><span>医師・医療従事者</span></label>
+          <label class="form-radio"><input type="radio" name="role" value="hospital-mgmt"><span>病院経営者・管理者</span></label>
+          <label class="form-radio"><input type="radio" name="role" value="gov"><span>自治体・行政担当者</span></label>
+          <label class="form-radio"><input type="radio" name="role" value="corp"><span>企業の事業開発・IT担当</span></label>
+          <label class="form-radio"><input type="radio" name="role" value="founder"><span>起業家・スタートアップ</span></label>
+          <label class="form-radio"><input type="radio" name="role" value="other"><span>その他</span></label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+        <textarea id="message" name="message" rows="7" placeholder="ご相談内容や、ご質問の背景などを具体的にお書きください。" required></textarea>
+      </div>
+
+      <div class="form-row form-row--check">
+        <label class="form-check">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <span><a href="#privacy" onclick="event.preventDefault();alert('プライバシーポリシーは別途ご用意ください。');">プライバシーポリシー</a>に同意の上、送信します。<span class="required">必須</span></span>
+        </label>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn--primary btn--large">この内容で送信する<span class="arrow">→</span></button>
+        <p class="form-submit__note">通常2営業日以内にご返信いたします。</p>
+      </div>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <p>お問い合わせを受け付けました。<br>担当者より2営業日以内にご連絡いたします。</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============== フッター ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="footer__logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20 4 L26 14 L36 14 L28 22 L31 34 L20 28 L9 34 L12 22 L4 14 L14 14 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+              <circle cx="20" cy="20" r="3" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>
+            <span class="logo-text__en">CREA MEDICAL</span>
+            <span class="logo-text__jp">クレアメディカル株式会社</span>
+          </span>
+        </a>
+        <p class="footer__addr">〒810-0001<br>福岡県福岡市中央区天神4-26 天神吉柳ビル7F<br>TEL: <a href="tel:09020354763">090-2035-4763</a></p>
+      </div>
+      <div class="footer__nav">
+        <h4>事業・会社情報</h4>
+        <ul>
+          <li><a href="#vision">Vision &amp; Message</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#company">Company</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h4>お問い合わせ</h4>
+        <ul>
+          <li><a href="#access">Access</a></li>
+          <li><a href="#contact">Contact Form</a></li>
+          <li><a href="tel:09020354763">電話でのお問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> CREA MEDICAL Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
